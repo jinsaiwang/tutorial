@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WorkBuddy 编程闯关教程 · 首页</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="glow a" aria-hidden="true"></div>
+<div class="glow b" aria-hidden="true"></div>
+
+<div class="wrap">
+<header class="topbar">
+  <div class="tb-left">
+    <span class="logo-dot"></span>
+    <span class="tb-title">WORKBUDDY · 编程闯关教程</span>
+  </div>
+  <div class="tb-right">
+    <span class="tb-stat" id="statTotal">22 章 · 10 关</span>
+    <button class="pill" id="gridToggle">GRID: ON</button>
+    <a class="pill solid" href="tutorial.html">开始闯关 →</a>
+  </div>
+</header>
+
+<main>
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <span class="badge"><b>FOR FRESHMAN</b> 给大一新生的第一本 AI 编程实战手册</span>
+    <h1>从不会问，到<span class="type" id="typeTarget"></span><span class="caret"></span></h1>
+    <p class="sub">
+      这本手册不教你写代码，教你<b>指挥一个会写代码的搭档</b>：怎么把需求说清楚、怎么让它真的动手、
+      怎么用 Skill 和插件固化重复劳动、怎么用 MCP 接外部数据、怎么请专家团、
+      以及怎么用执行模式和上下文管理，让长任务不跑偏。
+    </p>
+
+    <div class="cta-row">
+      <a class="btn primary" href="tutorial.html">
+        <span class="ico">&#9656;</span>
+        <span>
+          <span class="t">我要看书（先学一学）</span>
+          <span class="s">序章 + 9 关 · 22 章 · 由浅入深</span>
+        </span>
+      </a>
+      <a class="btn warm" href="practice.html">
+        <span class="ico">&#9679;</span>
+        <span>
+          <span class="t">我要上手（实践出真知）</span>
+          <span class="s">实战项目 · 像素猫电子宠物 · 约 70 分钟</span>
+        </span>
+      </a>
+    </div>
+
+    <p class="hero-meta">全程约 <span id="totalMin">200</span> 分钟 &nbsp;·&nbsp; 零基础可懂 &nbsp;·&nbsp; 所有提示词可直接复制</p>
+
+    <!-- 截屏位 首页主视觉 -->
+    <div class="shot-wrap" style="max-width:960px;margin:36px auto 0">
+      <div class="shot" data-src="assets/screens/home-hero.png" style="height:400px">
+        <div class="hint">
+          <b>SCREENSHOT · 首页主视觉</b>
+          把图片放到 <code>assets/screens/home-hero.png</code> 即自动替换<br>
+          建议 16:9 界面全屏截图
+        </div>
+      </div>
+      <p class="shot-cap">图 0-1 &nbsp;WorkBuddy 主视觉</p>
+    </div>
+  </section>
+
+  <!-- ========== 闯关路线图 ========== -->
+  <section class="section">
+    <p class="sec-kicker">ROADMAP // 闯关路线</p>
+    <h2 class="sec-title">先划边界，再装能力</h2>
+    <p class="sec-desc">从「它能碰什么」到「怎么管住它」，再到「给它装能力、接外援、请专家」。按顺序读，点任意一关直接开始。</p>
+    <div class="roadmap" id="roadmap"></div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section">
+    <p class="sec-kicker">FAQ // 常见问题</p>
+    <h2 class="sec-title">新生最常问的 6 件事</h2>
+    <div class="faq-list">
+
+      <details class="faq" open>
+        <summary><span class="q-no">Q1</span>我完全没写过代码，能学会用吗？<span class="tg">−</span></summary>
+        <div class="a">能。这本手册的定位就是「不教你写代码，教你指挥会写代码的搭档」。建议先读序章把环境备好，按顺序读到 S2 执行模式建立安全边界，再去实践区动手——看懂和会用是两件事，这本手册负责前一件。</div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="q-no">Q2</span>Skill、插件、MCP、专家团，到底有什么区别？<span class="tg">+</span></summary>
+        <div class="a">一句话区分：<b>Skill</b> 是「怎么做」的流程说明书；<b>插件/连接器</b> 是「能碰到哪些外部服务」；<b>MCP</b> 是接外部服务的通用协议（偏技术配置）；<b>专家团</b> 是「用什么专业角色和方法论干活」。分别对应 S5、S6、S8 三关，6.1 章专门讲插件和 MCP 怎么选。</div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="q-no">Q3</span>它写的代码跑不起来怎么办？<span class="tg">+</span></summary>
+        <div class="a">走 3.3 章的纠偏三步：指出具体哪一处不对 → 追加约束让它在现有结果上收敛 → 连续两轮都不对就回 Plan 模式重新对齐需求。关键是别一报错就让它整个重写。</div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="q-no">Q4</span>任务做到一半它开始跑偏了，为什么？<span class="tg">+</span></summary>
+        <div class="a">多半是上下文被污染了：一条对话塞了多个任务、或无关信息太多。看 4.1 和 4.2 章——换任务就开新对话，长任务要分段、存档、会重启。</div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="q-no">Q5</span>我的代码和密钥会被上传吗？<span class="tg">+</span></summary>
+        <div class="a">你贴进对话的内容会被读取处理。7.1 章划了线：密码、密钥、身份证号、未公开答案绝对不给；代码里的密钥先替换成占位符、写成环境变量。密钥一旦泄露，正确做法是去平台作废重发。</div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="q-no">Q6</span>要不要花钱？电脑配置一般能用吗？<span class="tg">+</span></summary>
+        <div class="a">基础能力可以先免费用起来，额度以官网公示为准。配置方面它主要靠网络对话，本地只需跑编辑器和终端，普通笔记本就够；真正吃资源的是你自己跑起来的项目。</div>
+      </details>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-in">
+    <div class="f-brand">
+      <span class="f-logo">WORKBUDDY QUEST</span>
+      <span class="f-tag">给大一新生的编程搭子 · 序章 + 9 关由浅入深</span>
+    </div>
+    <div class="f-cols">
+      <div class="f-col">
+        <h4>START</h4>
+        <a href="tutorial.html#0.1">站点导览</a>
+        <a href="tutorial.html#1.1">认识它</a>
+        <a href="tutorial.html#2.1">执行模式</a>
+      </div>
+      <div class="f-col">
+        <h4>POWER-UPS</h4>
+        <a href="tutorial.html#5.1">Skill</a>
+        <a href="tutorial.html#6.1">插件与 MCP</a>
+        <a href="tutorial.html#8.1">专家团</a>
+      </div>
+      <div class="f-col">
+        <h4>CONTROL</h4>
+        <a href="tutorial.html#4.1">上下文管理</a>
+        <a href="tutorial.html#7.1">安全边界</a>
+        <a class="warm" href="practice.html">实践区</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <span>© 2026 WORKBUDDY FRESHMAN GUIDE — MADE FOR FIRST-YEAR STUDENTS</span>
+    <span>实践区已开放：用 WorkBuddy 做一只会走动的像素猫</span>
+    <span class="footer-made">本网站由 WorkBuddy 协助创建</span>
+  </div>
+</footer>
+</div>
+
+<script src="assets/js/chapters.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# ===== 不部署到 GitHub Pages 的内容 =====
+# 文档（用户要求不上传）
+*.md
+
+# 本地项目记忆 / 隐私数据
+.workbuddy/
+
+# 临时校验文件
+/*.txt
+
+# 常见非站点文件
+node_modules/
+.vscode/
+.DS_Store

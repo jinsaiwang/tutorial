@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WorkBuddy 编程闯关教程 · 正文</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="tutorial">
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="glow a" aria-hidden="true"></div>
+
+<div class="wrap">
+<header class="topbar">
+  <div class="tb-left">
+    <span class="logo-dot"></span>
+    <span class="tb-title" id="crumbText">WORKBUDDY · 编程闯关教程</span>
+  </div>
+  <div class="tb-right">
+    <a class="pill" href="index.html">首页</a>
+    <a class="pill" href="practice.html">实践区</a>
+    <span class="tb-stat" id="topProgress">PROGRESS 0%</span>
+    <button class="pill" id="gridToggle">GRID: ON</button>
+  </div>
+</header>
+
+<div class="tut-body">
+  <!-- ========== 侧边栏 ========== -->
+  <aside class="sidebar">
+    <div class="sb-head">
+      <div class="sb-kicker">QUEST MAP</div>
+      <div class="sb-sub" id="sbMeta">序章 + 9 关 · 22 章 · 由浅入深</div>
+    </div>
+
+    <div class="sb-progress">
+      <div class="txt"><span id="progText">已完成 0 / 22 章</span></div>
+      <div class="bar"><i id="barFill"></i></div>
+    </div>
+
+    <div class="sb-search">
+      <input id="searchInput" type="text" placeholder="搜索章节 / 关键词">
+    </div>
+
+    <ul class="toc" id="toc"></ul>
+
+    <div class="sb-foot">
+      点章节切换正文，当前章高亮。<br>完成进度与自检勾选保存在本机浏览器。
+    </div>
+  </aside>
+
+  <!-- ========== 正文 ========== -->
+  <main class="main" id="chapterView"></main>
+</div>
+</div>
+
+<script src="assets/js/chapters.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
